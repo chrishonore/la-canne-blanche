@@ -1,6 +1,6 @@
 <div class="login">
     <h1>Bien venus sur le site comparatif des films!</h1>
-echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
+ "Si vous avez un compte d'utilisateur, veillez vous connecter!"
     <form name="seConnecterForm" id="seConnecterForm" method="post" action="">
         <legend>Coordonnées</legend>
         <p>
@@ -9,7 +9,6 @@ echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
         <p>
             <label for="password">Mot de passe:</label>
             <input type="password" name="password" id="password" placeholder="Champ obligatoire" required></p>
-        </fieldset>
         <br>
         <input type="submit" name="Connection" id="Connection" value="Connection">
         <input type="submit" name="Annuler" id="Annuler" value="Annuler">
