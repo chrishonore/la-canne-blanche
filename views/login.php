@@ -1,7 +1,7 @@
 <div class="login">
     <h1>Bien venus sur le site comparatif des films!</h1>
 echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
-    <form name="seConnecterForm" id="seConnecterForm" method="post" action="">
+    <form name="seConnecterForm" id="seConnecterForm" method="post" action="?page=login">
         <legend>Coordonnées</legend>
         <p>
             <label for="username">Username :</label>
@@ -12,7 +12,7 @@ echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
         </fieldset>
         <br>
         <input type="submit" name="Connection" id="Connection" value="Connection">
-        <input type="submit" name="Annuler" id="Annuler" value="Annuler">
+        <input type="reset" name="Annuler" id="Annuler" value="Annuler">
     </form>
     echo "Si vous n'avez pas encore un compte d'utiisateur, veillez en creer un:"
     <form name="newUserForm" id="newUserForm" method="post" action="?page=login">
@@ -39,6 +39,6 @@ echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
     </fieldset>
     <br>
     <input type="submit" name="Creer" id="Creer" value="Creez le compte">
-    <input type="submit" name="Annuler" id="Annuler" value="Annuler">
+    <input type="reset" name="Annuler" id="Annuler" value="Annuler">
     </form>
 </div>
