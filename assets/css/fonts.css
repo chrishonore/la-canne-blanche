@@ -1,0 +1,78 @@
+// Fonts
+@font-face {
+  font-family: "PT";
+  src: url('../fonts/proxima/PT.otf');
+}
+@font-face {
+  font-family: "OL";
+  src: url('../fonts/oswald/OL.ttf');
+}
+@font-face {
+  font-family: "OEL";
+  src: url('../fonts/oswald/OEL.ttf');
+}
+@font-face {
+  font-family: "OM";
+  src: url('../fonts/oswald/OM.ttf');
+}
+@font-face {
+  font-family: "PAL";
+  src: url('../fonts/proxima/PAL.otf');
+}
+@font-face {
+  font-family: "PR";
+  src: url('../fonts/proxima/PR.otf');
+}
+@font-face {
+  font-family: "PB";
+  src: url('../fonts/proxima/PB.otf');
+}
+
+@font-face {
+  font-family: "CPUL";
+  src: url('../fonts/cocogoose/CPUL.ttf');
+}
+@font-face {
+  font-family: "CPSL";
+  src: url('../fonts/cocogoose/CPSL.ttf');
+}
+@font-face {
+  font-family: "CPT";
+  src: url('../fonts/cocogoose/CPT.ttf');
+}
+@font-face {
+  font-family: "CPLT";
+  src: url('../fonts/cocogoose/CPLT.ttf');
+}
+
+@font-face {
+  font-family: "Evogria";
+  src: url('../fonts/evogria/Evogria.otf');
+}
+@font-face {
+  font-family: "Lastica";
+  src: url('../fonts/Lastica.ttf');
+}
+@font-face {
+  font-family: "TS";
+  src: url('../fonts/TS.ttf');
+}
+
+
+
+@font-face {
+  font-family: "CirB";
+  src: url('../fonts/circular/CirB.otf');
+}
+@font-face {
+  font-family: "CirB2";
+  src: url('../fonts/circular/CirB2.otf');
+}
+@font-face {
+  font-family: "CirM";
+  src: url('../fonts/circular/CirM.otf');
+}
+@font-face {
+  font-family: "CirL";
+  src: url('../fonts/circular/CirL.otf');
+}
