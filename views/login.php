@@ -15,7 +15,7 @@ echo "Si vous avez un compte d'utilisateur, veillez vous connecter!"
         <input type="submit" name="Annuler" id="Annuler" value="Annuler">
     </form>
     echo "Si vous n'avez pas encore un compte d'utiisateur, veillez en creer un:"
-    <form name="newUserForm" id="newUserForm" method="post" action="">
+    <form name="newUserForm" id="newUserForm" method="post" action="?page=login">
         <legend>Coordonnées</legend>
     <p>
         <label for="nom">Nom :</label>
