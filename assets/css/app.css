@@ -1,4 +1,45 @@
- body {
-    background: #333;
+body {
+    background: #222;
     color: #fff;
+}
+.cursor-disabled {
+    cursor: not-allowed;
+    opacity: 55%;
+}
+nav {
+    background: rgba(0, 0, 0, 0.18);
+}
+nav a {
+    font-family: "CirM";
+    color: #ee8cee;
+}
+nav .btn {
+    font-family: "CirM";
+    color: #ee8cee !important;
+    border-color: #ee8cee !important;
+}
+nav .btn:hover {
+    background: initial !important;
+}
+.banner-image {
+    width: 100%;
+    height: 100vh;
+    background: url("https://cdn.midjourney.com/5f50139b-50ec-44ce-b1cb-342339a3517f/0_3.webp") center no-repeat;
+    background: url("https://cdn.midjourney.com/48d7dc4f-423a-44d5-bd6b-de601ba25bd7/0_0.webp") center no-repeat;
+    background: url("https://cdn.midjourney.com/d4ec040c-4695-4352-9265-918218dc156b/0_2.png") center no-repeat;
+    background-size: cover;
+}
+
+.items-container h1 {
+    font-size: 1.7rem;
+    font-family: "CirM";
+}
+
+.item-card p {
+    margin-top: -100px !important;
+    margin-left: 15px !important;
+    font-size: 2rem;
+    font-family: "Lastica";
+    width: 250px;
+    opacity: .8;
 }
