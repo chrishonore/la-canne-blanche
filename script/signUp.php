@@ -1,13 +1,16 @@
 <?php
-global $conn;
 require('config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nom=$_POST[ 'nom'];
+    $prenom=$_POST['prenom'];
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash du mot de passe
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO users (username, password) VALUES ('$username','$password')";
-    $result = mysqli_query($conn, $query);
+    $query = "INSERT INTO users(nom,prenom,username,email,password)VALUES('$username','$email', '$password')";
+    $conn = 1;
+    $result = mysqli_query($query, $conn);
 
     if ($result) {
         echo "Inscription réussie !";
@@ -16,4 +19,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-

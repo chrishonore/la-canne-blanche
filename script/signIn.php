@@ -1,28 +1,28 @@
-<html lang="en">
-<body>
-
 <?php
+global $conn;
 require('config.php');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nom=$_POST[ 'nom'];
-    $prenom=$_POST['prenom'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash du mot de passe
 
-    $query = "INSERT INTO users(nom,prenom,username,email,password)VALUES('$username','$email', '$password')";
-    $conn = 1;
-    $result = mysqli_query($query, $conn);
+    if (empty($username) || empty($password)) {
+        echo "Veuillez remplir tous les champs.";
+    } elseif (!filter_var($password, FILTER_VALIDATE_password)) {
+    echo "Mot de passe invalid  .";
+    } else {
+
+    }
+    }
+
+    $query = "INSERT INTO users (username, password) 
+VALUES ('$username', '$password');
+    $result = mysqli_query($conn, $query);
 
     if ($result) {
-        echo "Inscription réussie !";
+        echo "Connecsion réussie !";
     } else {
-        echo "Erreur lors de l'inscription.";
+        echo "Erreur lors de la connecsion. Veillez verifier le nom d'utilisateur ou le mot de passe";
     }
 }
 ?>
-
-
-</body>
-</html>

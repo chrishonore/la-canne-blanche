@@ -1,6 +1,6 @@
 <div class="login">
     <h1>Le dashboard de l'admin</h1>
-echo "Veillez enregistreer les series que vous vullez reportorier dans le site."
+echo "Veillez enregistreer les series que vous voullez repertorier dans le site."
     <form name="addSeries" method="post" action="">
         <p>
             <label for="title">Title de la serie :</label>
