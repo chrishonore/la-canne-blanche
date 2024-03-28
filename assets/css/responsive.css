@@ -1,0 +1,13 @@
+@media screen and (max-width: 780px) {
+    .banner-image aside {
+        padding: 10px !important;
+    }
+}
+@media screen and (max-width: 680px) {
+    nav a, nav .btn-outline-info {
+        display: none;
+    }
+    nav span {
+        display: block !important;
+    }
+}
