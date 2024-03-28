@@ -1,5 +1,12 @@
+<?php
+require 'helper.php';
+
+$page = 'home';
+if (isset($_GET['page'])) $page = $_GET['page'];
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><?php echo getPageTitle($page) ?></title>
 </head>
 <body>
     <?php

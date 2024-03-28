@@ -1,6 +1,5 @@
 <?php
 $page = 'home';
-
 if (isset($_GET['page'])) $page = $_GET['page'];
 
 switch ($page) {
@@ -15,4 +14,3 @@ switch ($page) {
         include 'views/home.php';
         break;
 }
-?>
