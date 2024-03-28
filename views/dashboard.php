@@ -1,5 +1,6 @@
 <div class="login">
     <h1>Le dashboard de l'admin</h1>
+<<<<<<< HEAD
     <p>Veuillez enregistrer les series que vous voulez repertorier dans le site.</p>
     <form name="addSeries" method="post" action="?page=dashboard" enctype="multipart/form-data">
         <div class="row">
@@ -17,6 +18,11 @@
                 </select>
             </label>        </div>
         <div class="row">
+=======
+echo "Veillez enregistreer les series que vous voullez repertorier dans le site."
+    <form name="addSeries" method="post" action="">
+        <p>
+>>>>>>> a0206771b84580cd6e798252af53b16fc1b8573d
             <label for="title">Title de la serie :</label>
             <input type="text" name="title" id="title" placeholder="Champ obligatoire" required autofocus>
         </div>
