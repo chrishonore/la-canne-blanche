@@ -1,28 +1,35 @@
 <?php
-global $conn;
-require('config.php');
+$dbName = "Philipflix";
+$dbUser = "root";
+$dbPassword = "johnnyestbeau";
+$dbHost = "localhost";
+try {
+    $bdd = new PDO('mysql:host=' . $dbHost . ';dbname=' . $dbName, $dbUser , $dbPassword);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Vous etes connecte";
+} catch (PDOException $e) {
+    exit("Erreur de connexion : " . $e->getMessage());
+}
+$username = $_POST["username"];
+$password = $_POST["password"];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash du mot de passe
 
-    if (empty($username) || empty($password)) {
-        echo "Veuillez remplir tous les champs.";
-    } elseif (!filter_var($password, FILTER_VALIDATE_password)) {
-    echo "Mot de passe invalid  .";
-    } else {
+$query = "SELECT * FROM db_user WHERE username = :username";
+$statement = $bdd->prepare($query);
+$statement->bindParam(':username', $username);
+$statement->execute();
+$user = $statement->fetch(PDO::FETCH_ASSOC);
 
+if ($user) {
+    if ($password==$user['password']) {
+        header( "Location: http://localhost:63342/la-canne-blanche/views/home.php");
     }
-    }
-
-    $query = "INSERT INTO users (username, password) 
-VALUES ('$username', '$password');
-    $result = mysqli_query($conn, $query);
-
-    if ($result) {
-        echo "Connecsion réussie !";
-    } else {
-        echo "Erreur lors de la connecsion. Veillez verifier le nom d'utilisateur ou le mot de passe";
+    else {
+        echo 'Mot de passe incorrect.';
     }
 }
+else {
+    die("Cet utilisateur n'existe pas, veillez le taper a nouveau ou creer un compte.");
+    }
+
 ?>

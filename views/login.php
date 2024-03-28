@@ -6,7 +6,7 @@
         <fieldset>
         <legend>Coordonnées</legend>
         <p>
-            <label for="username">Username :</label>
+            <label for="username">Nom d'utilisateur :</label>
             <input type="text" name="username" id="username" placeholder="Champ obligatoire" required></p>
         <p>
             <label for="password">Mot de passe:</label>
@@ -29,15 +29,15 @@
         <input type="text" name="prenom" id="prenom" placeholder="Champ obligatoire" required autofocus></p>
             <p>
                 <label for="dateNaissance">Date de naissance :</label>
-                <input type="date" name="dateNaissance" id="dateNaissance" required>
+                <input type="text" name="dateNaissance" id="dateNaissance" required maxlength="10">
             </p>
             <p>
-            <label for="username">Nom d'utilisateur : (Veillez choisir un nom d'utilisateur)</label>
-            <input type="text" name="username" id="username" placeholder="Champ obligatoire" required autofocus></p>
-        <p>
         <label for="email">E-Mail : (exemple : jean.dupond@mail.com)</label>
         <input type="email" name="email" id="email" placeholder="Champ obligatoire" required></p>
-    <p>
+            <p>
+                <label for="username">Nom d'utilisateur : (Veillez choisir un nom d'utilisateur)</label>
+                <input type="text" name="username" id="username" placeholder="Champ obligatoire" required></p>
+            <p>
         <label for="password">Mot de passe: (Choisissez un mot de passe de minimum 5 caracteres dont au moins un nombre, une lettre majuscule et une lettre minuscule)</label>
         <input type="password" name="password" id="password" placeholder="Champ obligatoire" required></p>
     <p>
