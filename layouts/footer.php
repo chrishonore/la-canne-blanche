@@ -1,4 +1,4 @@
-<footer class=" bottom-0 w-100 px-4 pt-3">
-    <p class="float-start">Footer</p>
-    <p class="float-end">LCB</p>
+<footer class="w-100 px-5 pt-3">
+    <p class="float-start">Philipflix © 2024</p>
+    <p class="float-end">Tout droit réservé.</p>
 </footer>

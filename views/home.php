@@ -81,7 +81,7 @@ $results = [
                             <tbody>
                             <tr>
                                 <td>
-                                    <a class="text-decoration-none" href="">
+                                    <a class="text-decoration-none" href="https://www.netflix.com/" target="_blank">
                                         <span class="pe-0 material-symbols-outlined">explore</span> Netflix
                                     </a>
                                 </td>
@@ -92,7 +92,7 @@ $results = [
                             </tr>
                             <tr>
                                 <td>
-                                    <a class="text-decoration-none" href="">
+                                    <a class="text-decoration-none" href="https://tv.apple.com/" target="_blank">
                                         <span class="pe-0 material-symbols-outlined">explore</span> Apple Tv
                                     </a>
                                 </td>
@@ -103,7 +103,7 @@ $results = [
                             </tr>
                             <tr>
                                 <td>
-                                    <a class="text-decoration-none" href="">
+                                    <a class="text-decoration-none" href="https://primevideo.com" target="_blank">
                                         <span class="pe-0 material-symbols-outlined">explore</span> Amazon Prime
                                     </a>
                                 </td>
@@ -114,7 +114,7 @@ $results = [
                             </tr>
                             <tr>
                                 <td>
-                                    <a class="text-decoration-none" href="">
+                                    <a class="text-decoration-none" href="https://www.disneyplus.com/" target="_blank">
                                         <span class="pe-0 material-symbols-outlined">explore</span> Disney+
                                     </a>
                                 </td>

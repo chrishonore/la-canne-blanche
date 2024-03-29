@@ -138,3 +138,12 @@ tr a span {
 .login input::placeholder {
     color: rgba(255, 255, 255, 0.7) !important;
 }
+footer p {
+    font-family: "CirM";
+    letter-spacing: 1px;
+    color: #985bb7;
+}
+.swap-sign {
+    cursor: pointer;
+    color: violet;
+}
