@@ -1,6 +1,6 @@
 <?php
 // Donnée de connexion à DB
-$dbName = " Philipflix";
+$dbName = "Philipflix";
 $dbUser = "root";
 $dbPassword = "tessia";
 $dbHost = "localhost";// dans votre cas : localhost
@@ -14,26 +14,25 @@ try {
     exit("Erreur de connexion : " . $e->getMessage());
 }
 // Assignation des valeurs récupérées du front aux variables
-$categorie=$_POST["categorie"];
+
 $title = $_POST["title"];
 $description=$_POST["description"];
 $image=$_POST["image"];
-$link=$_POST["link"];
+$Lien_trailer=$_POST["Lien_trailer"];
 $netflix=$_POST["netflix"];
 $appeltv=$_POST["appeltv"];
-$prime=$_POST["prime"];
+$prime=$_POST["PRIME"];
 $DisneyPlus=$_POST["DisneyPlus"];
 // Requête SQL pour vérifier l'utilisateur
-$query = "INSERT INTO series ( categorie,titre, description ,image,link,netflix,appeltv,primeDisneyPlus) VALUES ( :categorie,:titre, :description,:image,:link,:netflix,:appeltv,:prime,:DisneyPlus)";
-
+$query = "INSERT INTO series (id_series, title, description, image, Lien_trailer, netflix, appeltv, primeDisneyPlus) VALUES (:categorie, :titre, :description, :image, :link, :netflix, :appeltv, :prime, :DisneyPlus)";
 // Préparation de la requête
 $statement = $bdd->prepare($query);
 // Liaison de la requêtes avec les données récupérées dans le champ de formulaire
-$statement->bindParam(':categorie', $categorie);
+$statement->bindParam(':id_series',$id_series);
 $statement->bindParam(':title', $title);
 $statement->bindParam(':description', $description);
 $statement->bindParam(':image', $image);
-$statement->bindParam(':link', $link);
+$statement->bindParam(':Lien_trailer', $link);
 $statement->bindParam(':netflix', $netflix);
 $statement->bindParam(':appelTv', $appeltv);
 $statement->bindParam(':prime', $prime);
