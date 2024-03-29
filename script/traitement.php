@@ -19,24 +19,44 @@ $title = $_POST["title"];
 $description=$_POST["description"];
 $image=$_POST["image"];
 $Lien_trailer=$_POST["Lien_trailer"];
-$netflix=$_POST["netflix"];
-$appeltv=$_POST["appeltv"];
-$prime=$_POST["PRIME"];
-$DisneyPlus=$_POST["DisneyPlus"];
+if (isset($_POST["netflix"])) {
+    $netflix = 1;
+}
+else{
+    $netflix=0;
+}
+if (isset($_POST["AppelTv"])) {
+    $appeltv =1;
+}
+else{
+    $appeltv =0;
+}
+if (isset($_POST["prime"]))
+{
+    $prime=1;
+}
+else{
+    $prime=0;
+}
+if (isset($_POST["DisneyPlus"])) {
+    $DisneyPlus = 1;
+}
+else{
+    $DisneyPlus=0;
+}
 // Requête SQL pour vérifier l'utilisateur
-$query = "INSERT INTO series (id_series, title, description, image, Lien_trailer, netflix, appeltv, primeDisneyPlus) VALUES (:categorie, :titre, :description, :image, :link, :netflix, :appeltv, :prime, :DisneyPlus)";
+$query = "INSERT INTO series ( title, description, image, Lien_trailer, netflix, appletv, prime,disneyplus) VALUES (:title, :description, :image, :link, :netflix, :appeltv, :prime, :DisneyPlus)";
 // Préparation de la requête
 $statement = $bdd->prepare($query);
 // Liaison de la requêtes avec les données récupérées dans le champ de formulaire
-$statement->bindParam(':id_series',$id_series);
 $statement->bindParam(':title', $title);
 $statement->bindParam(':description', $description);
 $statement->bindParam(':image', $image);
-$statement->bindParam(':Lien_trailer', $link);
+$statement->bindParam(':link', $Lien_trailer);
 $statement->bindParam(':netflix', $netflix);
-$statement->bindParam(':appelTv', $appeltv);
+$statement->bindParam(':appeltv', $appeltv);
 $statement->bindParam(':prime', $prime);
-$statement->bindParam(':disneyPlus', $DisneyPlus);
+$statement->bindParam(':DisneyPlus', $DisneyPlus);
 
 // Execution de la requête
 $statement->execute();
