@@ -1,5 +1,5 @@
 <div class="login">
-    <form name="addSeries" method="post" action="?page=dashboard" enctype="multipart/form-data">
+    <form name="addSeries" method="post" action="?page=dashboard">
         <fieldset class="mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-9 col-9 m-auto">
             <legend class="text-center mb-5"><h1>Ajouter un film</h1></legend>
             <div class="form-group m-auto mb-3">
@@ -20,19 +20,19 @@
             </div>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="netflix"> NETFLIX</label>
-                <input type="checkbox" name="netflix" id="netflix" >
+                <input type="checkbox" name="netflix" id="netflix">
             </div>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="AppelTv"> APPLE TV</label>
-                <input class="ps-3 py-3" type="checkbox" name="AppelTv" id="AppelTv" >
+                <input class="ps-3 py-3" type="checkbox" name="AppelTv" id="AppelTv">
             </div>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="prime"> PRIME</label>
-                <input class="ps-3 py-3" type="checkbox" name="prime" id="prime" >
+                <input class="ps-3 py-3" type="checkbox" name="prime" id="prime">
             </div>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="DisneyPlus"> DISNEY+</label>
-                <input class="ps-3 py-3" type="checkbox" name="DisneyPlus" id="DisneyPlus" >
+                <input class="ps-3 py-3" type="checkbox" name="DisneyPlus" id="DisneyPlus">
             </div>
 
             <input class="btn btn-outline-success me-3" type="submit" name="register" id="register" value="Ajouter">
