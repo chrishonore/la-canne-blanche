@@ -133,10 +133,10 @@ tr a span {
     z-index: -1;
     background: url("https://cdn.midjourney.com/6edba3f4-8dfb-468c-bd24-5a8683ff36b5/0_0.png") center no-repeat;
     background-size: cover;
-    padding-top: 10%;
+    padding-top: 6%;
 }
 .login input::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #a668c5;
 }
 footer p {
     font-family: "CirM";
@@ -146,4 +146,17 @@ footer p {
 .swap-sign {
     cursor: pointer;
     color: violet;
+}
+.login input {
+    border-color: #985bb7;
+}
+.login legend {
+    font-size: 3rem;
+    font-family: "GOT";
+    letter-spacing: 1px;
+    color: violet;
+}
+.login label {
+    font-family: "CirM";
+    color: #a668c5;
 }
