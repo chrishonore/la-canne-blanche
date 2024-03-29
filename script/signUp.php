@@ -1,5 +1,8 @@
 <?php
 <<<<<<< HEAD
+$dbName = "Philipflix";
+=======
+<<<<<<< HEAD
 // Donnée de connexion à DB
 $dbName = "users";
 $dbUser = "username";
@@ -64,6 +67,7 @@ if ($user) {
 ?>
 =======
 $dbName = "philipflix";
+>>>>>>> d010e0ff135857cda669b86c9c2ded73a5b11b5c
 $dbUser = "root";
 $dbPassword = "johnnyestbeau";
 $dbHost = "localhost";

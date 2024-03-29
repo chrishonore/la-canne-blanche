@@ -1,50 +1,50 @@
-<div class="login">
-    <h1>Bien venus sur le site comparatif des films!</h1>
-    <h2>Se connecter</h2>
-    <p>Si vous avez un compte d'utilisateur, veillez vous connecter!</p>
-    <form name="seConnecterForm" id="seConnecterForm" method="post" action="?page=login">
-        <fieldset>
-        <legend>Coordonnées</legend>
-        <p>
-            <label for="username">Nom d'utilisateur :</label>
-            <input type="text" name="username" id="username" placeholder="Champ obligatoire" required></p>
-        <p>
-            <label for="password">Mot de passe:</label>
-            <input type="password" name="password" id="password" placeholder="Champ obligatoire" required></p>
+<?php
+$isToggle = true;
+if (isset($_GET['toggle'])) $isToggle = $_GET['toggle'] === 'true' ? true : false;
+?>
+
+<div class="login position-fixed top-0 end-0 bottom-0 start-0">
+    <form method="post" action="?page=login">
+        <fieldset class="mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-9 col-9 m-auto">
+            <legend><?= !$isToggle ? 'Connexion' : 'Inscription' ?></legend>
+
+            <div class="<?= $isToggle ? 'd-block' : 'd-none' ?>">
+                <div class="form-group m-auto mb-3">
+                    <label for="firstName">Prénom</label>
+                    <input class="form-control bg-transparent text-white py-3" type="text" name="firstName" id="firstName" placeholder="Champ obligatoire" required>
+                </div>
+                <div class="form-group m-auto mb-3">
+                    <label for="lastName">Nom</label>
+                    <input class="form-control bg-transparent text-white py-3" type="text" name="lastName" id="lastName" placeholder="Champ obligatoire" required>
+                </div>
+                <div class="form-group m-auto mb-3">
+                    <label for="email">Adresse mail</label>
+                    <input class="form-control bg-transparent text-white py-3" type="email" name="email" id="email" placeholder="Champ obligatoire" required>
+                </div>
+                <div class="form-group m-auto mb-3">
+                    <label for="birthday">Date de naissance</label>
+                    <input class="form-control bg-transparent text-white py-3" type="text" name="birthday" id="birthday" placeholder="Champ obligatoire" required>
+                </div>
+            </div>
+
+            <div class="form-group m-auto mb-3">
+                <label for="username">Nom d'utilisateur</label>
+                <input class="form-control bg-transparent text-white py-3" type="text" name="username" id="username" placeholder="Champ obligatoire" required>
+            </div>
+            <div class="form-group m-auto mb-3">
+                <label for="password">Mot de passe</label>
+                <input class="form-control bg-transparent text-white py-3" type="password" name="password" id="password" placeholder="Champ obligatoire" required>
+            </div>
+
+            <p class="float-end mt-3 user-select-none swap-sign" onclick="window.location.href='?page=login&toggle=<?= $isToggle ? 'false' : 'true' ?>'"><?= !$isToggle ? 'Pas de compte ?' : 'Déja inscrit ?' ?> </p>
+            <input class="btn btn-outline-info mt-3" type="submit" value='<?= !$isToggle ? "Se connecter" : "S‘inscrire" ?>'>
         </fieldset>
-        <p><input type="submit" name="Connection" id="Connection" value="Connection">
-        <input type="reset" name="Annuler" id="Annuler" value="Annuler"></p>
     </form>
-<h2>S'enregistrer</h2>
-    <p>Si vous n'avez pas encore un compte d'utiisateur, veillez en creer un:</p>
-    <form name="newUserForm" id="newUserForm" method="post" action="?page=login">
-        <fieldset>
-        <legend>Coordonnées</legend>
-    <p>
-        <label for="nom">Nom :</label>
-        <input type="text" name="nom" autocomplete="family-name" id="nom" placeholder="Champ obligatoire" required autofocus>
-    </p>
-    <p>
-        <label for="prenom">Prenom :</label>
-        <input type="text" name="prenom" id="prenom" placeholder="Champ obligatoire" required autofocus></p>
-            <p>
-                <label for="dateNaissance">Date de naissance :</label>
-                <input type="text" name="dateNaissance" id="dateNaissance" required maxlength="10">
-            </p>
-            <p>
-        <label for="email">E-Mail : (exemple : jean.dupond@mail.com)</label>
-        <input type="email" name="email" id="email" placeholder="Champ obligatoire" required></p>
-            <p>
-                <label for="username">Nom d'utilisateur : (Veillez choisir un nom d'utilisateur)</label>
-                <input type="text" name="username" id="username" placeholder="Champ obligatoire" required></p>
-            <p>
-        <label for="password">Mot de passe: (Choisissez un mot de passe de minimum 5 caracteres dont au moins un nombre, une lettre majuscule et une lettre minuscule)</label>
-        <input type="password" name="password" id="password" placeholder="Champ obligatoire" required></p>
-    <p>
-        <label for="passwordConf">Confirmez le Mot de passe:</label>
-        <input type="password" name="passwordConf" id="passwordConf" placeholder="Champ obligatoire" required></p>
-    </fieldset>
-    <p><input type="submit" name="Creer" id="Creer" value="Creez le compte">
-    <input type="reset" name="Annuler" id="Annuler" value="Annuler"></p>
-    </form>
+
+    <section class="m-auto text-center mt-5">
+        <?php
+        if ($isToggle) include 'script/signUp.php';
+        else include 'script/signIn.php'
+        ?>
+    </section>
 </div>
