@@ -13,8 +13,5 @@
 
     INSERT INTO User (firstName, lastName, birthday, email, username, password, passwordConf)
 VALUES (Storme, Anna, anna@gmail.com, 12.12.2009, anabanana, 12345Asdf, 12345Asdf);
-=======
-    passwordConf VARCHAR(200) NOT NULL);
 
-INSERT INTO User(Storme, Anna, anna@gmail.com, 12.12.2009, anabanana, 12345Asdf, 12345Asdf);
 
