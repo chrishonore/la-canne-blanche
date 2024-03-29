@@ -135,8 +135,9 @@ tr a span {
     background-size: cover;
     padding-top: 6%;
 }
-.login input::placeholder {
-    color: #a668c5;
+.login input::placeholder,
+.login textarea::placeholder {
+    color: #a668c5 !important;
 }
 footer p {
     font-family: "CirM";
