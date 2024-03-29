@@ -3,6 +3,7 @@ $isToggle = true;
 if (isset($_GET['toggle'])) $isToggle = $_GET['toggle'] === 'true' ? true : false;
 ?>
 <div class="login">
+    <h1 class="text-center text-white-50">Nous rejoindre</h1>
     <form method="post" action="?page=login">
         <fieldset class="mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-9 col-9 m-auto">
             <legend class="text-center mb-5"><h1><?= !$isToggle ? 'Connexion' : 'Inscription' ?></h1></legend>
