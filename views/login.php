@@ -22,8 +22,8 @@ if (isset($_GET['toggle'])) $isToggle = $_GET['toggle'] === 'true' ? true : fals
                     <input class="form-control bg-transparent text-white py-3" type="email" name="email" id="email" placeholder="Champ obligatoire" required>
                 </div>
                 <div class="form-group m-auto mb-3">
-                    <label for="date">Date de naissance</label>
-                    <input class="form-control bg-transparent text-white py-3" type="date" name="date" id="date" placeholder="Champ obligatoire" required>
+                    <label for="birthday">Date de naissance</label>
+                    <input class="form-control bg-transparent text-white py-3" type="text" name="birthday" id="birthday" placeholder="Champ obligatoire" required>
                 </div>
             </div>
 
