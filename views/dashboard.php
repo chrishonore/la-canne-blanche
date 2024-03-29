@@ -1,7 +1,7 @@
 <div class="login">
     <form name="addSeries" method="post" action="?page=dashboard" enctype="multipart/form-data">
         <fieldset class="mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-9 col-9 m-auto">
-            <legend class="text-center mb-5">Ajouter un film</legend>
+            <legend class="text-center mb-5"><h1>Ajouter un film</h1></legend>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="title">Title de la serie :</label>
                 <input class="form-control bg-transparent text-white ps-3 py-3" type="text" name="title" id="title" placeholder="Champ obligatoire" required autofocus>
@@ -41,5 +41,5 @@
     </form>
 </div>
 <?php
-include '../script/traitement.php';
+include 'script/traitement.php';
 ?>
