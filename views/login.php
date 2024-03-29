@@ -37,7 +37,7 @@ if (isset($_GET['toggle'])) $isToggle = $_GET['toggle'] === 'true' ? true : fals
             </div>
 
             <p class="float-end mt-3 user-select-none swap-sign" onclick="window.location.href='?page=login&toggle=<?= $isToggle ? 'false' : 'true' ?>'"><?= !$isToggle ? 'Pas de compte ?' : 'Déja inscrit ?' ?> </p>
-            <input class="btn btn-outline-info mt-3" type="submit" value="Envoyé">
+            <input class="btn btn-outline-info mt-3" type="submit" value='<?= !$isToggle ? "Se connecter" : "S‘inscrire" ?>'>
         </fieldset>
     </form>
 
