@@ -15,7 +15,7 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 
 
-$query = "SELECT * FROM db_user WHERE username = :username";
+$query = "SELECT * FROM User WHERE username = :username";
 $statement = $bdd->prepare($query);
 $statement->bindParam(':username', $username);
 $statement->execute();

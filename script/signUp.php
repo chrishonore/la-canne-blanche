@@ -19,7 +19,7 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConf = $_POST["passwordConf"];
 
-$query = "SELECT * FROM user WHERE username = :username";
+$query = "SELECT * FROM User WHERE username = :username";
 // Préparation de la requête
 $statement = $bdd->prepare($query);
 // Liaison de la requêtes avec les données récupérées dans le champ de formulaire
