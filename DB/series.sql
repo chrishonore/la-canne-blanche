@@ -1,15 +1,15 @@
-CREATE DATABASE Philipflix IF NOT EXISTS  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+drop database Philipflix;
+CREATE DATABASE IF NOT EXISTS Philipflix CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-use Philipflix;
+USE Philipflix;
 
-CREATE TABLE IF NOT EXISTS series
-(
-    id_series INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(50) NOT NULL,
+CREATE TABLE IF NOT EXISTS series (
+                                      id_series INT PRIMARY KEY AUTO_INCREMENT,
+                                      title VARCHAR(50) NOT NULL,
     categorie VARCHAR(50) NOT NULL,
     description VARCHAR(350) NOT NULL,
-    image VARCHAR(100) NOT NULL,
-    lien_trailer VARCHAR(350) NOT NULL,
+    image VARCHAR(500) NOT NULL,
+    lien_trailer VARCHAR(500) NOT NULL,
     netflix BOOLEAN,
     appletv BOOLEAN,
     prime BOOLEAN,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS series
     );
 
 INSERT INTO series(title, categorie, description, image, lien_trailer, netflix, appletv, prime, disneyplus)
-VALUES ('La Casa de Papel', 'action', 'Huit voleurs font une prise d''otages dans la Maison royale de la Monnaie d''Espagne, tandis qu''un génie du crime manipule la police pour mettre son plan à exécution.', 'lhttps://occ-0-767-1335.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVqWVujN-BUQ3oO2xdbXelb4V7h2QClUdrE8scrOgUgvudpSpGKkyQKsHbymxSenhNrns7MjIO8Hc2g6FRU1N_frvvjut5ogx5ezbYTYkvqaFd1yHYe1gm-iE6EsgnCLpIOK.jpg?r=c62', 'https://www.youtube.com/watch?v=_yJxbWKN3zE', TRUE, FALSE, FALSE, FALSE);
+VALUES ('La Casa de Papel', 'action', 'Huit voleurs font une prise d''otages dans la Maison royale de la Monnaie d''Espagne, tandis qu''un génie du crime manipule la police pour mettre son plan à exécution.', 'https://occ-0-767-1335.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVqWVujN-BUQ3oO2xdbXelb4V7h2QClUdrE8scrOgUgvudpSpGKkyQKsHbymxSenhNrns7MjIO8Hc2g6FRU1N_frvvjut5ogx5ezbYTYkvqaFd1yHYe1gm-iE6EsgnCLpIOK.jpg?r=c62', 'https://www.youtube.com/watch?v=_yJxbWKN3zE', TRUE, FALSE, FALSE, FALSE);
 
 INSERT INTO series(title, categorie, description, image, lien_trailer, netflix, appletv, prime, disneyplus)
 VALUES ('the walking dead', 'SF', 'Après une apocalypse ayant transformé la quasi-totalité de la population en zombies, un groupe d''hommes et de femmes mené par l''officier Rick Grimes tente de survivre. Ensemble, ils vont devoir tant bien que mal faire face à ce nouveau monde.', 'https://occ-0-767-1335.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfQuNegkrQOd5GujjowtDNNRnwr8HhNN0Qb0miAIPOFgee4jhCTxOIWgoOTZp2r6MH3JOt4Of9a8KzGBqbZePpgFvJaO0FytPuk.webp?r=3f6', 'https://www.youtube.com/watch?v=AbtiqJGhWyY', TRUE, FALSE, FALSE, FALSE);
@@ -40,3 +40,16 @@ VALUES ('squid game', 'horreur', 'Des personnes en difficultés financières son
 INSERT INTO series(title, categorie, description, image, lien_trailer, netflix, appletv, prime, disneyplus)
 VALUES ('Mercredi', 'horreur', 'A présent étudiante à la singulière Nevermore Academy, un pensionnat prestigieux pour parias, Wednesday Addams tente de s''adapter auprès des autres élèves tout en enquêtant sur une série de meurtres qui terrorise la ville.', 'https://occ-0-767-1335.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd3FkLtrglDNJ6G9zGQQBeejORh9L0ivPdliJV_Xefg4Z9VWXLEiwWRvvs5zodeoF7YCy5lCzuUUi5RQSn-YJ5kIBpDid2VFPIvvFPEEfbpnAi4LnVzagujhQH1joSf1Wydw.jpg?r=97c', 'https://www.youtube.com/watch?v=VCB4W8SV744', TRUE, FALSE, FALSE, FALSE);
 
+CREATE TABLE user (
+                      id           INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                      firstName    VARCHAR(30)  NOT NULL,
+                      lastName     VARCHAR(30)  NOT NULL,
+                      birthday     DATE         NOT NULL,
+                      email        VARCHAR(50)  NOT NULL,
+                      username     VARCHAR(30)  NOT NULL,
+                      password     VARCHAR(200) NOT NULL,
+                      passwordConf VARCHAR(200) NOT NULL
+);
+
+INSERT INTO user (firstName, lastName, birthday, email, username, password, passwordConf)
+VALUES ('Storme', 'Anna', '2009-12-12', 'anna@gmail.com', 'anabanana', '12345Asdf', '12345Asdf');
