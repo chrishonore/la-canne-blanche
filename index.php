@@ -1,8 +1,8 @@
 <?php
-require 'helper.php';
+    require 'helper.php';
 
 $page = 'home';
-if (isset($_GET['page'])) $page = $_GET['page'];
+if (    isset($_GET['page'])) $page = $_GET['page'];
 ?>
 
 <!doctype html>
