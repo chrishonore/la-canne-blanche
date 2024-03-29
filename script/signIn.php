@@ -3,6 +3,7 @@ $dbName = "Philipflix";
 $dbUser = "root";
 $dbPassword = "johnnyestbeau";
 $dbHost = "localhost";
+
 try {
     $bdd = new PDO('mysql:host=' . $dbHost . ';dbname=' . $dbName, $dbUser , $dbPassword);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

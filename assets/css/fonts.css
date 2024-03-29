@@ -1,4 +1,3 @@
-// Fonts
 @font-face {
   font-family: "PT";
   src: url('../fonts/proxima/PT.otf');
@@ -56,6 +55,10 @@
 @font-face {
   font-family: "TS";
   src: url('../fonts/TS.ttf');
+}
+@font-face {
+  font-family: "GOT";
+  src: url('../fonts/GOT.ttf');
 }
 
 
