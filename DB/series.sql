@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS series
     Netflix BOOLEAN,
     Appletv BOOLEAN,
     Prime BOOLEAN,
-    Disneyplus BOOLEAN
-    );
+    Disneyplus BOOLEAN)
+;
 
 INSERT INTO series(Title, categorie, Description, Image, Lien_trailer, Netflix, Appletv, Prime, Disneyplus)
 VALUES ('La Casa de Papel', 'action', 'Huit voleurs font une prise d''otages dans la Maison royale de la Monnaie d''Espagne, tandis qu''un génie du crime manipule la police pour mettre son plan à exécution.', 'la_casa de_papel.jpg', 'https://www.youtube.com/watch?v=_yJxbWKN3zE', TRUE, FALSE, FALSE, FALSE);
