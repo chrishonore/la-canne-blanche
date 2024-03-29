@@ -1,5 +1,5 @@
 <?php
-$dbName = "philipflix";
+$dbName ="Philipflix";
 $dbUser = "root";
 $dbPassword = "johnnyestbeau";
 $dbHost = "localhost";
@@ -19,7 +19,7 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $passwordConf = $_POST["passwordConf"];
 
-$query = "SELECT * FROM db_user WHERE username = :username";
+$query = "SELECT * FROM user WHERE username = :username";
 // Préparation de la requête
 $statement = $bdd->prepare($query);
 // Liaison de la requêtes avec les données récupérées dans le champ de formulaire
@@ -36,16 +36,17 @@ if ($user) {
 } else {
     if ($password == $passwordConf) {
         // Préparation de la requête d'insertion
-        $requete = $bdd->prepare("INSERT INTO db_user (nom, prenom, dateNaissance, email, username, password) VALUES (:nom, :prenom, :dateNaissance, :username, :password)");
+        $requete = $bdd->prepare("INSERT INTO user (firstName, lastName, birthday, email, username, password, passwordConf) VALUES (:firstName, :lastName, :birthday, :username, :password :passwordConf)");
 
 
 // Liaison des valeurs aux paramètres de la requête
-        $requete->bindParam(':nom', $nom);
-        $requete->bindParam(':prenom', $prenom);
-        $requete->bindParam(':dateNaissance', $dateNaissance);
+        $requete->bindParam(':firstName', $firstName);
+        $requete->bindParam(':lastName', $lastName);
+        $requete->bindParam(':birthday', $birthday);
         $requete->bindParam(':email', $email);
         $requete->bindParam(':username', $username);
         $requete->bindParam(':password', $password);
+        $requete->bindParam(':passwordConf', $passwordConf);
 
 
 // Exécution de la requête
@@ -54,7 +55,7 @@ if ($user) {
         header("Location: http://localhost:63342/la-canne-blanche/views/login.php");
     }
     else{
-        echo "les deux mots de passes entré ne correspondent pas !";
+        echo "les deux mots de passes ne correspondent pas !";
     }
 }
 ?>
