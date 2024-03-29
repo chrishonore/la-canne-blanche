@@ -40,7 +40,7 @@ VALUES ('squid game', 'horreur', 'Des personnes en difficultés financières son
 INSERT INTO series(title, categorie, description, image, lien_trailer, netflix, appletv, prime, disneyplus)
 VALUES ('Mercredi', 'horreur', 'A présent étudiante à la singulière Nevermore Academy, un pensionnat prestigieux pour parias, Wednesday Addams tente de s''adapter auprès des autres élèves tout en enquêtant sur une série de meurtres qui terrorise la ville.', 'https://occ-0-767-1335.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd3FkLtrglDNJ6G9zGQQBeejORh9L0ivPdliJV_Xefg4Z9VWXLEiwWRvvs5zodeoF7YCy5lCzuUUi5RQSn-YJ5kIBpDid2VFPIvvFPEEfbpnAi4LnVzagujhQH1joSf1Wydw.jpg?r=97c', 'https://www.youtube.com/watch?v=VCB4W8SV744', TRUE, FALSE, FALSE, FALSE);
 
-CREATE TABLE user (
+CREATE TABLE User (
                       id           INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                       firstName    VARCHAR(30)  NOT NULL,
                       lastName     VARCHAR(30)  NOT NULL,
@@ -51,5 +51,5 @@ CREATE TABLE user (
                       passwordConf VARCHAR(200) NOT NULL
 );
 
-INSERT INTO user (firstName, lastName, birthday, email, username, password, passwordConf)
+INSERT INTO User (firstName, lastName, birthday, email, username, password, passwordConf)
 VALUES ('Storme', 'Anna', '2009-12-12', 'anna@gmail.com', 'anabanana', '12345Asdf', '12345Asdf');
