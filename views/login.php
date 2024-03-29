@@ -37,7 +37,7 @@ if (isset($_GET['toggle'])) $isToggle = $_GET['toggle'] === 'true' ? true : fals
             </div>
             <div class="form-group m-auto mb-3">
                 <label class="ps-3 py-1" for="passwordConf">Confirmez le mot de passe</label>
-                <input class="form-control bg-transparent text-white ps-3 py-3" type="passwordConf" name="passwordConf" id="passwordConf" placeholder="Champ obligatoire" required>
+                <input class="form-control bg-transparent text-white ps-3 py-3" type="password" name="passwordConf" id="passwordConf" placeholder="Champ obligatoire" required>
             </div>
 
             <p class="float-end mt-3 user-select-none swap-sign" onclick="window.location.href='?page=login&toggle=<?= $isToggle ? 'false' : 'true' ?>'"><?= !$isToggle ? 'Pas de compte ?' : 'Déja inscrit ?' ?></p>
